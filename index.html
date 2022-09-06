@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Encriptador Challenge 1</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <header class="encabezado">
+        <img src="imagenes/Logo.png" alt="Logo Alura">
+        <label> TEXT ENCRYPTOR </label>
+
+    </header>
+    <main>
+
+        <section class=" style-input-message">
+            <input type="text" placeholder="Ingrese el mensaje aquí" class="input-mensaje" id="texto"
+                oninput="validinput(event)">
+        </section>
+        <section class="out-message">
+            <textarea id="outTexto" readonly class="output-message"></textarea>
+
+            <img src="imagenes/Muñeco.png" alt="No se necontró ningun texto" class="image-position" id="imagen">
+
+            <div class="align-center">
+                <input type="button" id="button-copy" value="Copiar" onclick="copiar()" class="bottom-style-copy"
+                    disabled>
+            </div>
+        </section>
+
+
+        <div class="position-button">
+            <div class="warning-message">
+                <label>&#9888 Solo letras minúsculas y sin acentos </label>
+            </div>
+
+            <div>
+                <input type="button" id="button-encrypt" value="Encriptar" onclick="encriptar()"
+                    class="bottom-style-encriptar" disabled>
+                <input type="button" id="button-no-encrypt" value="Desencriptar" onclick="desencriptar()"
+                    class="bottom-style-desencriptar" disabled>
+            </div>
+        </div>
+
+
+
+    </main>
+    <script src="encriptador.js">
+    </script>
+    <footer>
+        <h4>Realizado por: Sthefany Zambrano</h4>
+    </footer>
+
+</body>
