@@ -6,6 +6,9 @@
     <title>Encriptador Challenge 1</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 
 </head>
@@ -17,43 +20,43 @@
 
     </header>
     <main>
+        <div class="container-principal">
+            <section class="box1">
+                <div class="main">
+                    <div class="input">
+                        <input type="text" placeholder="Ingrese el mensaje aquí" class="input-mensaje" id="texto"
+                            oninput="validinput(event)">
+                    </div>
+                    <div class="buttons">
+                        <label>&#9888 Solo letras minúsculas y sin acentos </label>
+                        <input type="button" id="button-encrypt" value="Encriptar" onclick="encriptar()"
+                            class="bottom-style-encriptar" disabled>
+                        <input type="button" id="button-no-encrypt" value="Desencriptar" onclick="desencriptar()"
+                            class="bottom-style-desencriptar" disabled>
 
-        <section class=" style-input-message">
-            <input type="text" placeholder="Ingrese el mensaje aquí" class="input-mensaje" id="texto"
-                oninput="validinput(event)">
-        </section>
-        <section class="out-message">
-            <textarea id="outTexto" readonly class="output-message"></textarea>
+                    </div>
 
-            <img src="imagenes/Muñeco.png" alt="No se necontró ningun texto" class="image-position" id="imagen">
-
-            <div class="align-center">
-                <input type="button" id="button-copy" value="Copiar" onclick="copiar()" class="bottom-style-copy"
-                    disabled>
-            </div>
-        </section>
-
-
-        <div class="position-button">
-            <div class="warning-message">
-                <label>&#9888 Solo letras minúsculas y sin acentos </label>
-            </div>
-
-            <div>
-                <input type="button" id="button-encrypt" value="Encriptar" onclick="encriptar()"
-                    class="bottom-style-encriptar" disabled>
-                <input type="button" id="button-no-encrypt" value="Desencriptar" onclick="desencriptar()"
-                    class="bottom-style-desencriptar" disabled>
-            </div>
+                </div>
+            </section>
+            <section class="box2">
+                <div class="container2">
+                    <textarea id="outTexto" readonly class="output-message"></textarea>
+                    <img src="imagenes/Muñeco.png" alt="No se necontró ningun texto" class="image-position" id="imagen">
+                    <div class="align-center">
+                        <input type="button" id="button-copy" value="Copiar" onclick="copiar()"
+                            class="bottom-style-copy" disabled>
+                    </div>
+                </div>
+            </section>
         </div>
-
-
 
     </main>
     <script src="encriptador.js">
     </script>
     <footer>
-        <h4>Realizado por: Sthefany Zambrano</h4>
+        <div class="container-footer">
+            <h4>Realizado por: Sthefany Zambrano</h4>
+        </div>
     </footer>
 
 </body>
