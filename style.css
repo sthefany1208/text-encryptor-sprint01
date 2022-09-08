@@ -1,26 +1,70 @@
 body{
+    margin: 0;
    background: linear-gradient(rgb(77, 77, 119), rgb(135, 135, 218) , rgb(214, 214, 247));
-
+   font-family: 'Open Sans', sans-serif;
+   height: 100vh;
+   
 }
 .encabezado{
     margin: 1% 0 1% 0;
-    padding: 2%;
-    font-family:cursive;
-    font-weight: bold;
+    padding: 0 2%;
+    
 }
 .encabezado>label{
+    font-weight: bold;
     display: block;
     text-align: center;
-    font-size: 2rem;
+    font-size: 3rem;
     color:#191935;
+    text-shadow: #191935;
 }
-
-.style-input-message{
-
-   text-align:center;
-   padding-right: 5%;
-   float: left;
-   
+.container-principal{
+    height: 60vh;
+    display: flex;
+    column-gap: 1em;
+}
+.box1{
+    padding: 2em;
+}
+.box1, .box2{
+    width: 50%;
+    height: 100%;
+}
+.box2, .container2{
+    display: grid;
+    place-items:unset;
+}
+.main{
+    max-width: 400px;
+    height: 380px;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.input{
+    width: 100%;
+    height: 300px;
+    padding: 1.5em;
+}
+.container2{
+    width: 300px;
+    height: 450px;
+}
+.container2 img{
+    width: 90%;
+}
+.output-message{
+    background:rgb(214, 214, 247);
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+    font-size: 22px;
+    font-weight: 400;
+    font-style:normal;
+    width: 500px;
+    height: 500px; 
+    padding: 10% 0 0 5%;
 }
 
 .input-mensaje{
@@ -30,103 +74,49 @@ body{
     border-radius: 10px;
     background:#F3F5FC;
     font-style:normal;
-    font-weight: 400px;
+    font-weight: 400;
     font-size: 22px;
-    padding: 15px;
-    width: 100%;
-    display: inline;
     text-align: left;
-    margin-left: 35%;
-    margin-right: 10%;
-    margin-bottom: 2%;
+    padding: 20px;   
 }
 
 ::placeholder{
     color: #0A3871;
     font-size: 1rem;
 }
-.out-message{
-    padding-left: 5%;
-    display: inline-block;
-    position: relative;
-    width: 500px;
-    height: 300px;
-    padding-bottom: 1%;
-   
-}
-.output-message{
-    background:rgb(214, 214, 247);
-    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
-    border-radius: 32px;
-    margin: 0 8% 0% 10%;
-    font-size: 22px;
-    font-weight: 400;
-    font-style:normal;
-    width: 500px;
-    height: 500px; 
-    padding: 10% 0 0 5%;
-    
-}
 
-.image-position{
-    position: absolute;
-    max-width: 600px;
-    max-height: 300px;
-    top: 45%;
-    left: 35%;
-
-}
-.warning-message{
-    margin: 2% 8% 1% 2%; 
-  
-}
-.position-button{
-    text-align: left;
-    margin: 0 5%;
-    width: 50%;
-    padding-top: 1%;
-    
-}
-
-
-.align-center{
-    width: 100%;
-    text-align: center;
-    margin-left: 10%;
-    
-}
-
-
-.bottom-style-encriptar{
-    padding: 20px 30px;
+.buttons input{
+    width: 150px;
+    font-size:1rem;
+    padding: 1em 0;
     background: #0A3871;
-    font-size: 1rem;
     border-radius: 24px;
     color: white;
     cursor: pointer;
-}
+    margin: 0.5em auto;
 
-.bottom-style-desencriptar{
-    padding: 20px 30px;
-    background: #D8DFE8;
-    font-size: 1rem;
+}
+.image-position{
+    position: absolute;
+    max-width: 400px;
+    max-height: 300px;
+    top: 35%;
+    left: 55%;
+
+}
+.align-center{
+    width: 100%;
+    text-align: center;   
+}
+.bottom-style-copy{
+    margin-top: 0.5em;
+    width: 150px;
+    font-size:1rem;
+    padding: 1em 0;
     border-radius: 24px;
     color: #0A3871;
     cursor: pointer;
 }
-
-.bottom-style-copy{
-    padding: 20px 30px;
-    background: #D8DFE8;
-    font-size: 1rem;
-    border-radius: 20px;
-    color: #0A3871;
-    cursor: pointer;
-   /* margin-left: 85%;*/
-    
- 
-}
-
 
 input:disabled,
 input[disabled]{
@@ -134,52 +124,58 @@ input[disabled]{
     border: 1px solid #999999;
     background-color: #cccccc;
 }
-
+.container-footer{
+    width: 100%;
+    height: 150px;
+}
 footer{
-    
-    text-align: right;
-    margin-right: 70px;
+    text-align:center;
+    margin-left: 0;
+     width: 100%;
+     padding-top: 5%;
+     background-image: url(imagenes/ola.svg);  
+     background-size: cover;
+     
 }
 
 @media screen and (max-width:1000px){
-  
-    .input-mensaje{
-        text-align: center;
-        margin: 0  20% 0 30%;
-        
-    }
 
-    .out-message{
-        padding: 1% 5%;
-        width: 400px;
-        height: 400px; 
-    }
+ .container-principal{
+    display: block;
+    text-align: center;
+ }
+ .box1 , .box2{
+    width: 100%;
+    padding: 1em;
+    height: auto;
+    
+ }
+ .buttons{
+    text-align: center;
+ }
+ .buttons input{
+    display: block;
+ }
+.box2{
+    width: 100%;
+    text-align: center;
+}
+.box2, .container2{
+    margin: auto;
+    display: block;
 
-    .output-message{
-    width: 400px;
-    height: 400px; 
+}
+.output-message{
+    width: 300px;
+    height: 200px;
     
-    /*padding-left: 5%;*/
-    }
-    
-    .image-position{
-        position: absolute;
-        max-width: 550px;
-        max-height: 250px;
-        top: 30%;
-        left: 30%;
-    }
-    .position-button{
-        width: 100%;
-        text-align: center;
-        margin-top: 1%;
-        
-        
-    }
-    .warning-message{
-        margin: 3% 10% 2% 10%; 
-      
-    }
+}
+.container2 img{
+    display: none;
+}
+footer{
+    display: none;
+}    
     
     
 }
