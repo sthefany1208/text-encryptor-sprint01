@@ -136,6 +136,9 @@ footer{
      background-image: url(imagenes/ola.svg);  
      background-size: cover;
      
+    
+
+     
 }
 
 @media screen and (max-width:1000px){
@@ -170,8 +173,13 @@ footer{
     height: 200px;
     
 }
-.container2 img{
-    display: none;
+.image-position{
+    top: 65%;
+    left: 35%;
+    max-width: 200px;
+    max-height: 200px;
+}
+    
 }
 footer{
     display: none;
