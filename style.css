@@ -1,8 +1,10 @@
 body{
     margin: 0;
-   background: linear-gradient(rgb(77, 77, 119), rgb(135, 135, 218) , rgb(214, 214, 247));
+  /* background: linear-gradient(rgb(77, 77, 119), rgb(135, 135, 218) , rgb(214, 214, 247));*/
+  background-image: url(imagenes/subtle-prism.svg);
+  background-size: cover;
    font-family: 'Open Sans', sans-serif;
-   height: 100vh;
+   height:100vh;
    
 }
 .encabezado{
@@ -19,7 +21,7 @@ body{
     text-shadow: #191935;
 }
 .container-principal{
-    height: 60vh;
+    height: 70vh;
     display: flex;
     column-gap: 1em;
 }
@@ -48,6 +50,8 @@ body{
     height: 300px;
     padding: 1.5em;
 }
+
+
 .container2{
     width: 300px;
     height: 450px;
@@ -56,7 +60,7 @@ body{
     width: 90%;
 }
 .output-message{
-    background:rgb(214, 214, 247);
+    background-color: transparent;
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
     border-radius: 32px;
     font-size: 22px;
@@ -89,7 +93,7 @@ body{
     width: 150px;
     font-size:1rem;
     padding: 1em 0;
-    background: #0A3871;
+    background: #0d7785;
     border-radius: 24px;
     color: white;
     cursor: pointer;
@@ -126,25 +130,22 @@ input[disabled]{
 }
 .container-footer{
     width: 100%;
-    height: 150px;
+    height: 20%;
 }
 footer{
     text-align:center;
     margin-left: 0;
      width: 100%;
-     padding-top: 5%;
+     padding-top: 4%;
+     padding-bottom: 1%;
      background-image: url(imagenes/ola.svg);  
      background-size: cover;
-     
-    
-
-     
 }
 
 @media screen and (max-width:1000px){
 
  .container-principal{
-    display: block;
+    display: grid;
     text-align: center;
  }
  .box1 , .box2{
@@ -152,6 +153,9 @@ footer{
     padding: 1em;
     height: auto;
     
+ }
+ .main{
+    justify-content: center;
  }
  .buttons{
     text-align: center;
@@ -165,8 +169,11 @@ footer{
 }
 .box2, .container2{
     margin: auto;
-    display: block;
+    
 
+}
+.input{
+    height: 100px;
 }
 .output-message{
     width: 300px;
@@ -181,11 +188,9 @@ footer{
 }
     
 }
-footer{
-    display: none;
-}    
+   
     
     
-}
+
 
 
